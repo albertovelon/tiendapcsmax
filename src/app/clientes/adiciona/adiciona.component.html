@@ -1,3 +1,59 @@
-<p>
-  adiciona works!
-</p>
+<form #addForm="ngForm">
+  <table>
+    <tbody>
+      <tr>
+        <th>Creacion de Clientes</th>
+      </tr>
+      <tr>
+        <td>
+            <md-form-field>
+                <input mdInput placeholder="Nombre" required [(ngModel)]="cliente.nombre" name="nombre" #nombre="ngModel" />
+                <md-error *ngIf="!nombre.valid && !nombre.pristine">
+                  Ingrese Nombre Valido
+                </md-error>
+              </md-form-field>
+        </td>
+      </tr>
+      <tr>
+          <td>
+            <md-form-field>
+              <input mdInput placeholder="Direccion" required [(ngModel)]="cliente.direccion" name="direccion" #direccion="ngModel" />
+            </md-form-field>
+            <md-error *ngIf="!direccion.valid && !direccion.pristine">
+              Ingrese Direccion Valida
+            </md-error>
+          </td>
+        </tr>
+        <tr>
+            <td>
+              <md-form-field>
+                <input mdInput placeholder="Telefono" required [(ngModel)]="cliente.telefono" name="telefono" #telefono="ngModel" />
+              </md-form-field>
+              <md-error *ngIf="!telefono.valid && !telefono.pristine">
+                Ingreso Numero telefono
+              </md-error>
+            </td>
+          </tr>
+          <tr>
+              <td>
+                <md-form-field>
+                  <input mdInput placeholder="Ciudad" required [(ngModel)]="cliente.ciudad" name="ciudad" #ciudad="ngModel" />
+                </md-form-field>
+                <md-error *ngIf="!ciudad.valid && !ciudad.pristine">
+                  Ingrese la ciudad
+                </md-error>
+              </td>
+            </tr>
+      <tr>
+          <td colspan="2">
+            <br/>
+            <div class="button-row">
+              <button md-raised-button color="primary" [disabled]="!addForm.valid" (click)="onSaveCustomer()">
+                Save
+              </button>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+</form>

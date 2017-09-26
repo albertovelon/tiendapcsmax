@@ -13,6 +13,43 @@ import { MenuComponent } from './menu/menu.component';
 import { CurrentOptionComponent } from './current-option/current-option.component';
 import { ProveedoresModule } from './proveedores/proveedores.module';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+MdAutocompleteModule,
+MdButtonModule,
+MdButtonToggleModule,
+MdCardModule,
+MdCheckboxModule,
+MdChipsModule,
+//MdCoreModule,
+MdDatepickerModule,
+MdDialogModule,
+MdExpansionModule,
+MdGridListModule,
+MdIconModule,
+MdInputModule,
+MdListModule,
+MdMenuModule,
+MdNativeDateModule,
+MdPaginatorModule,
+MdProgressBarModule,
+MdProgressSpinnerModule,
+MdRadioModule,
+MdRippleModule,
+MdSelectModule,
+MdSidenavModule,
+MdSliderModule,
+MdSlideToggleModule,
+MdSnackBarModule,
+MdSortModule,
+MdTableModule,
+MdTabsModule,
+MdToolbarModule,
+MdTooltipModule,
+} from '@angular/material';
+
+
+
 const appRoutes : Routes = [
   { path: 'clientes/index', component: IndexComponent },
   { path: 'proveedores/adiciona', component: AdicionaComponent }
@@ -27,11 +64,43 @@ const appRoutes : Routes = [
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     ClientesModule,
     ProveedoresModule,
     RouterModule.forRoot(
       appRoutes
-    )
+    ),
+    MdAutocompleteModule,
+    MdButtonModule,
+    MdButtonToggleModule,
+    MdCardModule,
+    MdCheckboxModule,
+    MdChipsModule,
+   // MdCoreModule,
+    MdDatepickerModule,
+    MdDialogModule,
+    MdExpansionModule,
+    MdGridListModule,
+    MdIconModule,
+    MdInputModule,
+    MdListModule,
+    MdMenuModule,
+    MdNativeDateModule,
+    MdPaginatorModule,
+    MdProgressBarModule,
+    MdProgressSpinnerModule,
+    MdRadioModule,
+    MdRippleModule,
+    MdSelectModule,
+    MdSidenavModule,
+    MdSliderModule,
+    MdSlideToggleModule,
+    MdSnackBarModule,
+    MdSortModule,
+    MdTableModule,
+    MdTabsModule,
+    MdToolbarModule,
+    MdTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

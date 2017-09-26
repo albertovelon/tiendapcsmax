@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Cliente } from '../cliente';
+
 @Component({
   selector: 'app-adiciona',
   templateUrl: './adiciona.component.html',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdicionaComponent implements OnInit {
 
-  constructor() { }
+  public cliente:Cliente;
+
+  
+  constructor() { 
+  //  this.cliente = new Cliente("Luis Alberto");
+    this.cliente = new Cliente("", "", "", "");
+  }
 
   ngOnInit() {
   }
