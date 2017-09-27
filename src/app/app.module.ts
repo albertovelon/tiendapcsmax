@@ -2,7 +2,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { ClientesModule } from './clientes/clientes.module';
 import { AdicionaComponent as AdicionaComponent} from './proveedores/adiciona/adiciona.component';
 

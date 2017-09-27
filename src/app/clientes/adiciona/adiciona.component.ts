@@ -14,10 +14,14 @@ export class AdicionaComponent implements OnInit {
   
   constructor() { 
   //  this.cliente = new Cliente("Luis Alberto");
-    this.cliente = new Cliente("", "", "", "");
+   this.cliente = new Cliente("", "", "", "");
   }
 
   ngOnInit() {
   }
+
+//  onSaveCliente(){        
+//    console.log(JSON.stringify(this.cliente));
+//  }
 
 }
