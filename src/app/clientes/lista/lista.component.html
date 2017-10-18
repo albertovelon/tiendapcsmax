@@ -1,3 +1,14 @@
-<p>
-  lista works!
-</p>
+<table border="1">
+  <tr>
+    <td>Nombre</td>
+    <td>Direccion</td>
+    <td>Telefono</td>
+    <td>Ciudad</td>
+  </tr>
+  <tr *ngFor="let cliente of servmemoriaService.clientesList">
+    <td>{{cliente.nombre}}</td>
+    <td>{{cliente.direccion}}</td>
+    <td>{{cliente.telefono}}</td>
+    <td>{{cliente.ciudad}}</td>
+  </tr>
+</table>

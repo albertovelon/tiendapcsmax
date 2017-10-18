@@ -41,6 +41,8 @@ import {
   MdTooltipModule,
 } from '@angular/material';
 
+import { ServmemoriaService } from './servmemoria.service';
+
 @NgModule({
   imports: [
     FormsModule,
@@ -78,6 +80,7 @@ import {
     MdToolbarModule,
     MdTooltipModule,
   ],
-  declarations: [ListaComponent, AdicionaComponent, IndexComponent]
+  declarations: [ListaComponent, AdicionaComponent, IndexComponent],
+  providers:[ServmemoriaService]
 })
 export class ClientesModule { }
