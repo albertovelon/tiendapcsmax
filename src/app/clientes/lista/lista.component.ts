@@ -14,4 +14,10 @@ export class ListaComponent implements OnInit {
   ngOnInit() {
   }
 
+  getCiudadOptions() {
+    return [
+      "Manizales",
+      "Villamaria"
+    ]
+  };
 }

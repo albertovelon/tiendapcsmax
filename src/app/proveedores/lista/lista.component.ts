@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Proveedor } from '../proveedores';
+import { ServmemoriaService } from '../servmemoria.service'
+
+
 @Component({
   selector: 'app-lista',
   templateUrl: './lista.component.html',
@@ -7,9 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  
+ // constructor() { }
+  constructor(private servmemoriaService:ServmemoriaService) { }
+  
+    ngOnInit() {
+    }
+  
+//    getCiudadOptions() {
+//      return [
+      //"Manizales",
+//        "Villamaria"
+//      ]
+//    };
 }

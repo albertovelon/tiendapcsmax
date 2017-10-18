@@ -1,3 +1,16 @@
-<p>
-  lista works!
-</p>
+<table border="1">
+  <tr>
+    <td>Nombre</td>
+    <td>Direccion</td>
+    <td>Telefono</td>
+    <td>Contacto</td>
+    <td>Tipo Proveedor</td>
+  </tr>
+  <tr *ngFor="let proveedor of servmemoriaService.proveedoresList">
+    <td>{{proveedor.nombre}}</td>
+    <td>{{proveedor.direccion}}</td>
+    <td>{{proveedor.telefono}}</td>
+    <td>{{proveedor.contacto}}</td>
+    <td>{{proveedor.tipoproducto}}</td>
+  </tr>
+</table>

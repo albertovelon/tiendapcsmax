@@ -1,3 +1,71 @@
-<p>
-  adiciona works!
-</p>
+<form #addForm="ngForm">
+  <table>
+    <tbody>
+      <tr>
+        <th>Creacion de Proveedores</th>
+      </tr>
+      <tr>
+        <td>
+            <md-form-field>
+                <input mdInput placeholder="Nombre" required [(ngModel)]="proveedor.nombre" name="nombre" #nombre="ngModel" />
+                <md-error *ngIf="!nombre.valid && !nombre.pristine">
+                  Ingrese Nombre Valido
+                </md-error>
+              </md-form-field>
+        </td>
+      </tr>
+      <tr>
+          <td>
+            <md-form-field>
+              <input mdInput placeholder="Direccion" required [(ngModel)]="proveedor.direccion" name="direccion" #direccion="ngModel" />
+            </md-form-field>
+            <md-error *ngIf="!direccion.valid && !direccion.pristine">
+              Ingrese Direccion Valida
+            </md-error>
+          </td>
+        </tr>
+        <tr>
+            <td>
+              <md-form-field>
+                <input mdInput placeholder="Telefono" required [(ngModel)]="proveedor.telefono" name="telefono" #telefono="ngModel" />
+              </md-form-field>
+              <md-error *ngIf="!telefono.valid && !telefono.pristine">
+                Ingreso Numero telefono
+              </md-error>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <md-form-field>
+                <input mdInput placeholder="Contacto" required [(ngModel)]="proveedor.contacto" name="contacto" #contacto="ngModel" />
+              </md-form-field>
+              <md-error *ngIf="!contacto.valid && !contacto.pristine">
+                Ingrese contacto
+              </md-error>
+            </td>
+          </tr>
+          <tr>
+              <td>
+                <md-select placeholder="TipoProducto" required [(ngModel)]="proveedor.tipoproducto" name="tipoproducto" #tipoproducto="ngModel">
+                  <md-option *ngFor="let tipoproducto of ListaTipo" [value]="tipoproducto.value">
+                    {{ tipoproducto.label }}
+                  </md-option>
+                </md-select>
+                <md-error *ngIf="!tipoproducto.valid">
+                  Seleccion un tipo
+                </md-error>
+              </td>
+            </tr>
+      <tr>
+          <td colspan="2">
+            <br/>
+            <div class="button-row">
+              <button md-raised-button color="primary" [disabled]="!addForm.valid" (click)="onSaveCliente()">
+                Guardar
+              </button>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+</form>

@@ -13,7 +13,14 @@ export class AdicionaComponent implements OnInit {
 
   public cliente:Cliente;
 
-
+  ListaCiudad = [
+    { value: 'MANIZALES', label: 'Manizales' },
+    { value: 'VILLAMARIA', label: 'Villamaria' },
+    { value: 'SALAMINA', label: 'SALAMINA' },
+    { value: 'CALI', label: 'Cali' },
+    { value: 'MEDELLIN', label: 'Medellin' },
+    { value: 'BOYACA', label: 'Boyaca' }    
+  ];
   
   constructor(private servmemoriaService:ServmemoriaService) { 
   //  this.cliente = new Cliente("Luis Alberto");

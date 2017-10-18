@@ -36,11 +36,13 @@
           </tr>
           <tr>
               <td>
-                <md-form-field>
-                  <input mdInput placeholder="Ciudad" required [(ngModel)]="cliente.ciudad" name="ciudad" #ciudad="ngModel" />
-                </md-form-field>
-                <md-error *ngIf="!ciudad.valid && !ciudad.pristine">
-                  Ingrese la ciudad
+                <md-select placeholder="Ciudad" required [(ngModel)]="cliente.ciudad" name="Ciudad" #ciudad="ngModel">
+                  <md-option *ngFor="let ciudad of ListaCiudad" [value]="ciudad.value">
+                    {{ ciudad.label }}
+                  </md-option>
+                </md-select>
+                <md-error *ngIf="!ciudad.valid">
+                  Seleccion una ciudad
                 </md-error>
               </td>
             </tr>
