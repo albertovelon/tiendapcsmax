@@ -1,11 +1,18 @@
-<table border="1">
+<div class="datagrid">
+    <table>
+        <thead>
   <tr>
-    <td>Marca</td>
-    <td>Precion Venta</td>
-    <td>Precion Compra</td>
-    <td>Tipo Producto</td>
-    <td>Utilidad</td>
+    <th>Marca</th>
+    <th>Precion Venta</th>
+    <th>Precion Compra</th>
+    <th>Tipo Producto</th>
+    <th>Utilidad</th>
   </tr>
+</thead>
+
+  <tfoot><tr><td colspan="5"><div id="paging"><ul><li><a href="#"><span>Previous</span></a></li><li><a href="#" class="active"><span>1</span></a></li><li><a href="#"><span>2</span></a></li><li><a href="#"><span>3</span></a></li><li><a href="#"><span>4</span></a></li><li><a href="#"><span>5</span></a></li><li><a href="#"><span>Next</span></a></li></ul></div></tr></tfoot>
+  
+    <tbody>
   <tr *ngFor="let computador of servmemoriaService.computadorList">
     <td>{{computador.marca}}</td>
     <td>{{computador.precioventa}}</td>
@@ -13,4 +20,5 @@
     <td>{{computador.tipoproducto}}</td>
     <td>{{computador.utilidad}}</td>
   </tr>
+  </tbody>
 </table>

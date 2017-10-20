@@ -1,11 +1,18 @@
-<table border="1">
-  <tr>
-    <td>Nombre</td>
-    <td>Direccion</td>
-    <td>Telefono</td>
-    <td>Contacto</td>
-    <td>Tipo Proveedor</td>
+<div class="datagrid">
+    <table>
+        <thead>
+      <tr>
+    <th>Nombre</th>
+    <th>Direccion</th>
+    <th>Telefono</th>
+    <th>Contacto</th>
+    <th>Tipo Proveedor</th>
   </tr>
+</thead>
+
+  <tfoot><tr><td colspan="5"><div id="paging"><ul><li><a href="#"><span>Previous</span></a></li><li><a href="#" class="active"><span>1</span></a></li><li><a href="#"><span>2</span></a></li><li><a href="#"><span>3</span></a></li><li><a href="#"><span>4</span></a></li><li><a href="#"><span>5</span></a></li><li><a href="#"><span>Next</span></a></li></ul></div></tr></tfoot>
+  
+    <tbody>
   <tr *ngFor="let proveedor of servmemoriaService.proveedoresList">
     <td>{{proveedor.nombre}}</td>
     <td>{{proveedor.direccion}}</td>
@@ -13,4 +20,6 @@
     <td>{{proveedor.contacto}}</td>
     <td>{{proveedor.tipoproducto}}</td>
   </tr>
+</tbody>
 </table>
+</div>

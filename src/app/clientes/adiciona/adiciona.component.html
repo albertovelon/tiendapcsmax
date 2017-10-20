@@ -2,7 +2,7 @@
   <table>
     <tbody>
       <tr>
-        <th>Creacion de Clientes</th>
+        <th><h2>Creacion de Clientes</h2></th>
       </tr>
       <tr>
         <td>
@@ -13,8 +13,6 @@
                 </md-error>
               </md-form-field>
         </td>
-      </tr>
-      <tr>
           <td>
             <md-form-field>
               <input mdInput placeholder="Direccion" required [(ngModel)]="cliente.direccion" name="direccion" #direccion="ngModel" />
@@ -23,8 +21,8 @@
               Ingrese Direccion Valida
             </md-error>
           </td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>
               <md-form-field>
                 <input mdInput placeholder="Telefono" required [(ngModel)]="cliente.telefono" name="telefono" #telefono="ngModel" />
@@ -33,9 +31,7 @@
                 Ingreso Numero telefono
               </md-error>
             </td>
-          </tr>
-          <tr>
-              <td>
+            <td>
                 <md-select placeholder="Ciudad" required [(ngModel)]="cliente.ciudad" name="Ciudad" #ciudad="ngModel">
                   <md-option *ngFor="let ciudad of ListaCiudad" [value]="ciudad.value">
                     {{ ciudad.label }}

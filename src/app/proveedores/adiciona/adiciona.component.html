@@ -2,7 +2,7 @@
   <table>
     <tbody>
       <tr>
-        <th>Creacion de Proveedores</th>
+        <th><h2>Creacion de Proveedores</h2></th>
       </tr>
       <tr>
         <td>
@@ -23,8 +23,6 @@
               Ingrese Direccion Valida
             </md-error>
           </td>
-        </tr>
-        <tr>
             <td>
               <md-form-field>
                 <input mdInput placeholder="Telefono" required [(ngModel)]="proveedor.telefono" name="telefono" #telefono="ngModel" />
@@ -43,8 +41,6 @@
                 Ingrese contacto
               </md-error>
             </td>
-          </tr>
-          <tr>
               <td>
                 <md-select placeholder="TipoProducto" required [(ngModel)]="proveedor.tipoproducto" name="tipoproducto" #tipoproducto="ngModel">
                   <md-option *ngFor="let tipoproducto of ListaTipo" [value]="tipoproducto.value">
