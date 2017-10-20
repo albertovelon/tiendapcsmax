@@ -1,0 +1,16 @@
+<table border="1">
+  <tr>
+    <td>Marca</td>
+    <td>Precion Venta</td>
+    <td>Precion Compra</td>
+    <td>Tipo Producto</td>
+    <td>Utilidad</td>
+  </tr>
+  <tr *ngFor="let computador of servmemoriaService.computadorList">
+    <td>{{computador.marca}}</td>
+    <td>{{computador.precioventa}}</td>
+    <td>{{computador.preciocompra}}</td>
+    <td>{{computador.tipoproducto}}</td>
+    <td>{{computador.utilidad}}</td>
+  </tr>
+</table>

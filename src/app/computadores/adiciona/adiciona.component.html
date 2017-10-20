@@ -1,0 +1,70 @@
+<form #addForm="ngForm">
+  <table>
+    <tbody>
+      <tr>
+        <th>Creacion de Computadores</th>
+      </tr>
+      <tr>
+        <td>
+            <md-form-field>
+                <input mdInput placeholder="Marca" required [(ngModel)]="computador.marca" name="marca" #marca="ngModel" />
+                <md-error *ngIf="!marca.valid && !marca.pristine">
+                  Ingrese marca Valido
+                </md-error>
+              </md-form-field>
+        </td>
+      </tr>
+      <tr>
+          <td>
+            <md-form-field>
+              <input mdInput placeholder="Precio Venta" required [(ngModel)]="computador.precioventa" name="precioventa" #precioventa="ngModel" />
+            </md-form-field>
+            <md-error *ngIf="!precioventa.valid && !precioventa.pristine">
+              Ingrese Precio de venta Valida
+            </md-error>
+          </td>
+        </tr>
+        <tr>
+            <td>
+              <md-form-field>
+                <input mdInput placeholder="Precio compra" required [(ngModel)]="computador.preciocompra" name="preciocompra" #preciocompra="ngModel" />
+              </md-form-field>
+              <md-error *ngIf="!preciocompra.valid && !preciocompra.pristine">
+                Ingreso Precio de compra Valida
+              </md-error>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <md-form-field>
+                <input mdInput placeholder="Tipo producto" required [(ngModel)]="computador.tipoproducto" name="tipoproducto" #tipoproducto="ngModel" />
+              </md-form-field>
+              <md-error *ngIf="!tipoproducto.valid && !tipoproducto.pristine">
+                Ingreso Tipo de producto Valido
+              </md-error>
+            </td>          
+          </tr>
+
+          <tr>
+            <td>
+              <md-form-field>
+                <input mdInput placeholder="Utilidad" required [(ngModel)]="computador.utilidad" name="utilidad" #utilidad="ngModel" />
+              </md-form-field>
+              <md-error *ngIf="!utilidad.valid && !utilidad.pristine">
+                Ingres utilidad
+              </md-error>
+            </td>
+            </tr>
+      <tr>
+          <td colspan="2">
+            <br/>
+            <div class="button-row">
+              <button md-raised-button color="primary" [disabled]="!addForm.valid" (click)="onSaveCliente()">
+                Guardar
+              </button>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+</form>

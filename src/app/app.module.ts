@@ -5,16 +5,19 @@ import { NgModule } from '@angular/core';
 
 import { ClientesModule } from './clientes/clientes.module';
 import { ProveedoresModule } from './proveedores/proveedores.module';
+import { ComputadoresModule } from './computadores/computadores.module';
 
 import { AdicionaComponent as AdicionaComponent} from './proveedores/adiciona/adiciona.component';
 
 import { IndexComponent } from './clientes/index/index.component';
 import { IndexComponentprov } from './proveedores/index/index.componentprov';
+import { IndexpcComponent } from './computadores/indexpc/indexpc.component';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { CurrentOptionComponent } from './current-option/current-option.component';
 
+import {HttpModule} from '@angular/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
@@ -56,7 +59,8 @@ MdTooltipModule,
 const appRoutes : Routes = [
   { path: 'clientes/index', component: IndexComponent },
   //{ path: 'proveedores/adiciona', component: AdicionaComponent }
-  { path: 'proveedores/index', component: IndexComponentprov }
+  { path: 'proveedores/index', component: IndexComponentprov },
+  { path: 'computadores/indexpc', component:  IndexpcComponent}
 ];
 
 @NgModule({
@@ -70,6 +74,8 @@ const appRoutes : Routes = [
     BrowserAnimationsModule,
     ClientesModule,
     ProveedoresModule,
+    ComputadoresModule,
+    HttpModule,
     RouterModule.forRoot(
       appRoutes
     ),

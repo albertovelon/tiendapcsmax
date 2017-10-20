@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListaComponent } from './lista/lista.component';
 import { AdicionaComponent } from './adiciona/adiciona.component';
-import { IndexComponent } from './index/index.component';
+import { IndexpcComponent } from './indexpc/indexpc.component';
+import { ListaComponent } from './lista/lista.component';
 
 import { CdkTableModule } from '@angular/cdk/table';
 import { FormsModule }   from '@angular/forms';
@@ -42,7 +42,6 @@ import {
 } from '@angular/material';
 
 import { ServmemoriaService } from './servmemoria.service';
-//import{ ClienteDataService } from './customer-data-server.service'
 
 @NgModule({
   imports: [
@@ -81,7 +80,7 @@ import { ServmemoriaService } from './servmemoria.service';
     MdToolbarModule,
     MdTooltipModule,
   ],
-  declarations: [ListaComponent, AdicionaComponent, IndexComponent],
+  declarations: [AdicionaComponent, IndexpcComponent, ListaComponent],
   providers:[ServmemoriaService]
 })
-export class ClientesModule { }
+export class ComputadoresModule { }

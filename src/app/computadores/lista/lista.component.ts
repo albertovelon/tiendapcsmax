@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Cliente } from '../cliente';
+
+import { Computador } from '../computadores';
 import { ServmemoriaService } from '../servmemoria.service'
- 
+
 @Component({
   selector: 'app-lista',
   templateUrl: './lista.component.html',
@@ -13,6 +14,5 @@ export class ListaComponent implements OnInit {
 
   ngOnInit() {
   }
-
 
 }
